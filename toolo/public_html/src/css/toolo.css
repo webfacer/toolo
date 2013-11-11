@@ -1,0 +1,39 @@
+/* 
+    Created on : 09.11.2013, 03:25:27
+    Author     : wf
+*/
+
+.toolo {
+    position: relative;
+    display: block;
+    width: 200px;
+    border: 1px solid #000000;
+}
+
+.toolo .tip {
+    position: absolute;
+    top: 0;
+    display: none;
+    width: 200px;
+    background-color: #339966;
+}
+
+.toolo:hover .tip {
+    display: block;
+}
+
+.toolo .tip.top {
+    top: -100%;
+}
+
+.toolo .tip.bottom {
+    top: 100%;
+}
+
+.toolo .tip.left {
+    left: -100%;
+}
+
+.toolo .tip.right {
+    left: 100%;
+}
