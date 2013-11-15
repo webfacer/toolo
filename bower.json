@@ -1,0 +1,7 @@
+{
+  "name": "toolo",
+  "version": "0.0.9",
+  "dependencies": {
+    "angular": "1.2.0"
+  }
+}
