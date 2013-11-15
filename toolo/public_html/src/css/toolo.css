@@ -1,6 +1,6 @@
-/* 
-    Created on : 09.11.2013, 03:25:27
-    Author     : @webfacer
+/*
+Created on : 09.11.2013, 03:25:27
+Author : @webfacer
 */
 
 /*
@@ -21,6 +21,10 @@ body {
     font-size: 0.875em;
 }
 
+span {
+    margin: 10px 0;
+}
+
 
 /*
 #############################################
@@ -31,19 +35,12 @@ body {
 */
 
 .toolo {
-    position: relative;
-    display: inline-block;
-    margin-left: -100px;
-    border: 1px solid #000000;
-    cursor: pointer;
-}
-
-.toolo .tip {
-    padding: 7px 15px;
     position: absolute;
     top: 0;
-    opacity: 0;
+
     display: inline-block;
+    padding: 7px 15px;
+
     background-color: #000000;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -57,38 +54,6 @@ body {
     color: #FFFFFF;
 }
 
-.toolo:hover .tip {
-    filter: alpha(opacity=50);
-    opacity: 1;
-    zoom: 1;
-}
-
-
-/*
-############################################
-############################################
-## it´s up to you where do you move toolo ##
-############################################
-############################################
-*/
-.toolo .tip.top {
-    top: -100%;
-    margin-top: -6px;
-}
-
-.toolo .tip.bottom {
-    top: 100%;
-    margin-top: 6px;
-}
-
-.toolo .tip.left {
-    left: -25%;
-}
-
-.toolo .tip.right {
-    margin-left: 6px;
-}
-
 /*
 #############################################
 #############################################
@@ -96,25 +61,25 @@ body {
 #############################################
 #############################################
 */
-.toolo .tip:after {
+.toolo:after {
     content: "";
     position: absolute;
     border-style: solid;
     border-color: #000000 transparent;
     /* reduce the damage in FF3.0 */
-    display: block; 
+    display: block;
     width: 0;
     z-index: 99999;
 }
 
-.toolo .tip.top:after {
-    bottom: -5px;
-    left: 50%; /* controls horizontal position */
-    margin-left: -5px;
-    border-width: 5px 5px 0; /* vary these values to change the angle of the vertex */
+.toolo.top:after {
+    top: -5px;
+    left:50%; /* controls horizontal position */
+    margin-left: -10px;
+    border-width: 0 5px 5px 5px; /* vary these values to change the angle of the vertex */
 }
 
-.toolo .tip.right:after {
+.toolo.right:after {
     top: 50%;
     left: -5px; /* controls horizontal position */
     margin-top: -5px;
@@ -122,7 +87,7 @@ body {
     border-color: transparent #000000;
 }
 
-.toolo .tip.left:after {
+.toolo.left:after {
     top: 50%;
     right: -5px; /* controls horizontal position */
     margin-top: -5px;
@@ -131,9 +96,9 @@ body {
 }
 
 
-.toolo .tip.bottom:after {
-    top: -5px;
-    left:50%; /* controls horizontal position */
-    margin-left: -10px;
-    border-width: 0 5px 5px 5px; /* vary these values to change the angle of the vertex */
+.toolo.bottom:after {
+    bottom: -5px;
+    left: 50%; /* controls horizontal position */
+    margin-left: -5px;
+    border-width: 5px 5px 0; /* vary these values to change the angle of the vertex */
 }
