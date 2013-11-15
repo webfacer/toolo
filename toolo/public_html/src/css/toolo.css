@@ -1,27 +1,61 @@
 /* 
     Created on : 09.11.2013, 03:25:27
-    Author     : wf
+    Author     : @webfacer
+*/
+
+/*
+#############################################
+#############################################
+###### it´s up to you what you do here ######
+#############################################
+#############################################
+*/
+body {
+    padding: 0;
+    margin: 100px 0 0 50%;
+    font-family: Arial, Sans-serif;
+    font-size: 101%;
+}
+
+#wrapper {
+    font-size: 0.875em;
+}
+
+
+/*
+#############################################
+#############################################
+########## the toolo look and feel ##########
+#############################################
+#############################################
 */
 
 .toolo {
     position: relative;
     display: block;
     width: 200px;
+    margin-left: -100px;
     border: 1px solid #000000;
+    cursor: pointer;
 }
 
 .toolo .tip {
+    padding: 7px 15px;
     position: absolute;
     top: 0;
     opacity: 0;
-    display: block;
-    width: 200px;
+    display: inline-block;
     background-color: #000000;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
     -webkit-transition: opacity 0.5s;
     -moz-transition: opacity 0.5s;
     -ms-transition: opacity 0.5s;
     -o-transition: opacity 0.5s;
-    transition: opacity 0.5s;
+
+    font-size: 0.85714285714em;
+    color: #FFFFFF;
 }
 
 .toolo:hover .tip {
@@ -30,62 +64,78 @@
     zoom: 1;
 }
 
+
+/*
+############################################
+############################################
+## it´s up to you where do you move toolo ##
+############################################
+############################################
+*/
 .toolo .tip.top {
     top: -100%;
-    margin-top: -15px;
+    margin-top: -6px;
 }
 
 .toolo .tip.bottom {
     top: 100%;
-    margin-top: 15px;
+    margin-top: 6px;
 }
 
 .toolo .tip.left {
-    left: -100%;
-    margin-left: -15px;
+    left: -25%;
 }
 
 .toolo .tip.right {
     left: 100%;
-    margin-left: 15px;
+    margin-left: 6px;
 }
 
+/*
+#############################################
+#############################################
+######## the arrow in all directions ########
+#############################################
+#############################################
+*/
 .toolo .tip:after {
     content: "";
     position: absolute;
     border-style: solid;
     border-color: #000000 transparent;
     /* reduce the damage in FF3.0 */
-    display: block; 
+    display: block;
     width: 0;
-    z-index: 2;
+    z-index: 99999;
 }
 
 .toolo .tip.top:after {
-    bottom: -15px;
+    bottom: -5px;
     left: 50%; /* controls horizontal position */
-    margin-left: -15px;
-    border-width: 15px 15px 0; /* vary these values to change the angle of the vertex */
+    margin-left: -5px;
+    border-width: 5px 5px 0; /* vary these values to change the angle of the vertex */
 }
 
 .toolo .tip.right:after {
-    top: 0;
-    left: -15px; /* controls horizontal position */
-    border-width: 15px 15px 15px 0; /* vary these values to change the angle of the vertex */
+    top: 50%;
+    left: -5px; /* controls horizontal position */
+    margin-top: -5px;
+    border-width: 5px 5px 5px 0; /* vary these values to change the angle of the vertex */
     border-color: transparent #000000;
 }
 
 .toolo .tip.left:after {
-    top: 0;
-    right: -15px; /* controls horizontal position */
-    border-width: 15px 0 15px 15px; /* vary these values to change the angle of the vertex */
+    top: 50%;
+    right: -5px; /* controls horizontal position */
+    margin-top: -5px;
+    border-width: 5px 0 5px 5px; /* vary these values to change the angle of the vertex */
     border-color: transparent #000000;
 }
 
 
 .toolo .tip.bottom:after {
-    top: -15px;
+    top: -5px;
     left:50%; /* controls horizontal position */
-    margin-left: -25px;
-    border-width: 0 15px 15px 15px; /* vary these values to change the angle of the vertex */
+    margin-left: -10px;
+    border-width: 0 5px 5px 5px; /* vary these values to change the angle of the vertex */
 }
