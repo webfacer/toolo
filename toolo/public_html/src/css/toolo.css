@@ -21,6 +21,9 @@ body {
     font-size: 0.875em;
 }
 
+/**
+* you should delete this when you using this css copy pastubg
+*/
 span {
     margin: 10px 0;
 }
