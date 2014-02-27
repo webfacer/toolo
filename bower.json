@@ -1,0 +1,9 @@
+{
+  "name": "toolo",
+  "version": "0.0.9",
+  "description": "It´s a logo for toolo. We will create toolo faces, also you are invited to do your own toolo face ['-']",
+  "license": "GPLv2",
+  "dependencies": {
+    "angular": "1.2.0"
+  }
+}
